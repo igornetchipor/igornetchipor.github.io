@@ -1,0 +1,379 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="css/custom.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+ @-ms-viewport     { width: device-width; }
+ @-o-viewport      { width: device-width; }
+ @viewport         { width: device-width; }
+ *{
+ 	-webkit-box-sizing: border-box;
+ 	box-sizing: border-box; 
+ }
+ @mixin rouded-buttons {
+ 	background-color: 	#0c8a2d;
+ 	color: 	#ffffff;
+ 	border-radius: 	10px;
+
+ }
+/* typography start */
+
+h2,h3 {
+	color: #02330f;
+	font-weight: 600;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 18px;
+}
+p {
+	color: #151f24;
+	font-size: 15px;
+}
+a {
+	&:hover {
+		text-decoration: none;
+	}
+	
+}
+
+
+/* typography end*/
+
+body {
+	min-width: 320px;
+}
+
+/*  top header start*/
+.custom-bg {
+	background-color: #fbfafa;
+}
+.page-top-header{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.phone {
+	padding-top: 3px;
+	text-align: center;
+	vertical-align: middle;
+	&__icon{
+		display: inline-block;
+		width: 27px;
+		height: 27px;
+		border-radius: 50px;
+		background-color: #ea3749;
+		text-align: center;
+		vertical-align: inherit;
+		&--{
+
+		}
+		span {
+			margin-top: 1px;
+			vertical-align: middle;
+			color: #ffffff;
+		}
+
+	}
+	&__number{
+		display: inline-block;
+		font-family: 'Signika', sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+		color: #04330d;
+		vertical-align: inherit;
+		&--{
+			
+		}
+	}
+}
+.form-group {
+	position: relative;
+	margin-bottom: 0;
+	font-family: 'Signika', sans-serif;
+	input,
+	.btn {
+		color: #ffffff;
+		border: none;
+		border-radius: 0;
+	}
+	input {
+		width: 191px;
+		font-style: italic;
+		font-weight: 400;
+		background-color: #9bcc00;
+		&::-webkit-input-placeholder {
+			color: #ffffff;	
+		}
+		&:-ms-input-placeholder {
+			color: #ffffff;	
+		}
+		&::placeholder {
+			color: #ffffff;	
+		}
+	}
+	.btn {
+		height: 34px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: none;
+		background-color: #aad454;
+		span {
+			margin-top: 3px;
+		}
+		
+	}
+}
+
+/*  top header end*/
+
+/*  jumbotron  start*/
+
+.jumbotron {
+	background: #fff url(../img/jumbotron_bg.png) center center no-repeat;
+	height: 350px;
+	margin-bottom: 0;
+}
+/*  jumbotron  end*/
+/*  navigation  start*/
+.navbar {
+	padding-top: 4px;
+	background-color: #fbfafa;
+	border: none; 
+	margin-bottom: 0;
+	.container-fluid {
+		display: inline-block;
+	}
+
+	.navbar-nav>li>a {
+		margin-left: 70px;
+		margin-right: 70px;
+		color: #02330f;
+		font-size: 16px;
+		font-weight: 600;
+		&:hover {
+			@include rouded-buttons;
+		}
+
+	}
+	.dropdown-menu.custom {
+		left: 26%;
+		margin-top: 6px;
+		background-color: #0c8a2d;	
+		border-radius: 	10px;
+		padding: 5px;
+		a{
+			padding: 5px 30px;
+			color: 	#ffffff;
+			&:hover {
+				background-color: #96bf0c;
+				border-radius: 	10px;
+			}
+
+		}
+	}
+
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+	@include rouded-buttons;
+}
+/*  navigation  end*/
+/* news section start*/
+.main-section {
+	padding-top: 25px;
+	border-top: 2px solid #d6e4eb;
+	background-color: #e6f0d9;
+
+}
+.info {
+	&__item {
+		img{
+			border: 6px solid #ffffff;
+		}
+	}
+}
+.news-section {
+	margin-top: 12px;
+}
+.headertwo {
+	text-align: center;
+	&__image,
+	&__item{
+		display: inline-block;
+	}
+	&__image {
+		vertical-align: inherit;
+	}
+	&__item{
+		text-align: center;
+	}
+}
+.newsstories {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #0d8b2e;
+	&:last-child {
+		border: none;
+	}
+	&__image {
+		margin-right: 20px;
+		float: left;
+		border: 5px solid #ffffff;
+		
+	}
+	&__header {
+		margin-top: 0;
+	}
+	&__date {
+		margin-bottom: 10px;
+		color: #616239;
+		span{
+			margin-right: 5px;
+			color: #96bf0c;
+		}
+	}
+}
+/* news section end*/
+/* footer section start*/
+footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #151f24;
+	border-top: 2px solid #d6e4eb;
+	background-color: #f0f5e9;
+	a {
+		text-decoration: underline;
+		color: #151f24;
+	}
+	li{ 
+		list-style-type: none;
+
+	}
+
+}
+.createdby {
+	width: 185px;
+	&__image {
+		margin-right: 5px;
+		float: left;
+	}
+}
+/* footer section end*/
+/* responsive  start*/
+@media (max-width: 1170px) {
+	.jumbotron {
+		background: #fff url(../img/jumbotron_bg.png) 40% center  no-repeat;
+	}
+
+}
+@media (max-width: 1100px){
+	.navbar {
+		.navbar-nav>li {
+			float: none;
+			display: inline-block; 
+		}
+		.navbar-nav>li>a {
+			margin-left: 0px;
+			margin-right: 152px;
+		}
+		.navbar-nav>li:last-child a {
+			margin-right: 0;
+		}
+
+		.dropdown-menu.custom {
+			left: 0%;
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.form-inline.text-right {
+		margin-top: 10px;
+		text-align: center;
+		.form-group input {
+			width: 100%;
+		}
+	}
+	.jumbotron {
+		background: #fff url(../img/jumbotron_bg_small.png) center center no-repeat;
+	}
+	.navbar {
+		.navbar-nav>li {
+		}
+		.navbar-nav>li>a {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		.navbar-nav>li:last-child a {
+			margin-right: 0;
+		}
+
+		.dropdown-menu.custom {
+			left: 0%;
+		}
+	}
+	.info {
+		text-align: center;
+		margin-bottom: 10px;
+		&__item {
+			img {
+				display: inline-block;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.navbar  {
+		.container-fluid {
+			display: block;
+		}
+		.navbar-nav  {
+			padding-left: 10px;
+			padding-right: 10px;
+			> li {
+				display: block;
+				a {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+			.open {
+				padding-left: 5px;
+				padding-right: 5px; 
+				.dropdown-menu>li>a
+				{
+					color: #ffffff;
+				}
+
+			}
+			
+		}
+	}
+}
+@media (max-width: 600px) {
+	footer {
+		.col-md-6.col-lg-6 {
+			text-align: center;
+		}
+		.pull-left,
+		.pull-right{
+			float: none !important;
+			display: inline-block;
+		}
+	}
+}
+/* responsive  end*/
